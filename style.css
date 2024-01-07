@@ -13,7 +13,7 @@
   --fs-500: 3.125rem; 
   --fs-600: 3.625rem;
 
-  --fs-body: var(fs-400);
+  --fs-body: var(--fs-400);
   --fs-heading: var(--fs-500);
   --fs-title: var(--fs-600);
   --fs-nav: var(--fs-300);
@@ -55,36 +55,22 @@ body{
 
 li, a {
   font-family: var(--font-family-heading);
-  font-size: var(--fs-300);
-  color: var(--clr-neutral-100);
+  /*font-size: var(--fs-300);*/
   text-decoration: none;
   position: relative;
   
 }
 
-li::after {
-  content: ''; 
-  position: absolute;
-  background-color: var(--clr-primary-400);
-  height: 3px;
-  width: 0;
-  left: 13px;
-  bottom: 25px;
-  transition: all .5s ease;
-}
 
-li:hover::after{
-  width: 75%;
-}
 
 .login {
   background-color: var(--clr-neutral-700);
   color: var(--clr-neutral-100);
   font-family: var(--font-family-heading);
-  font-size: var(--fs-300);
-  height: 70px;
-  width: 250px;
-  margin-top: 50px;
+  font-size: 2rem;
+  height: 100px;
+  width: 280px;
+  margin-top: 0px;
   margin-bottom: 50px;
   border-radius: 8px;
   border-color: var(--clr-neutral-100);
@@ -95,10 +81,10 @@ li:hover::after{
 header{
   display: flex;
   justify-content: space-between;
-  background-color: var(--clr-acccent-200);
+  background-color: var(--clr-neutral-100);
   align-items: center;
   padding: 15px 10%;
-  
+  color: black;
 }
 
 footer {
@@ -107,6 +93,9 @@ footer {
   background-color: var(--clr-neutral-100);
   padding: 15px 10%;
   color: black;
+  position: static;
+  bottom: 0;
+  width: 100%
 }
 
 .list {
@@ -135,6 +124,21 @@ svg {
   max-width: 100%;
   height: auto;
   
+}
+
+.pictures {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right:0px; 
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.headshot {
+    width: 25%;
+    height: 25%;
+    margin-bottom:0px;
 }
 
 
@@ -191,6 +195,22 @@ svg {
 .nav__links li {
   display: inline-block;
   padding: 30px 20px;
+  color:black;
+}
+
+.nav_animate::after {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-primary-400);
+    height: 3px;
+    width: 0;
+    left: 0px;
+    bottom: -5px;
+    transition: all .5s ease;
+}
+
+.nav_animate:hover::after {
+    width: 100%;
 }
 
 .home-page {
@@ -274,6 +294,21 @@ padding-top: 5%;
   padding-top: 2%;
 }
 
+.foot-links::after {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-primary-400);
+    height: 3px;
+    width: 0;
+    left: 0px;
+    bottom: 0px;
+    transition: all .5s ease;
+}
+
+.foot-links:hover::after {
+    width: 100%;
+}
+
 .rederict {
   text-decoration: underline;
 }
@@ -289,15 +324,16 @@ padding-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5%;
   text-align: center;
+
 }
 
 .service-options{
-  padding-left: 18%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   text-decoration: underline;
   font-size: var(--fs-400);
+  color: var(--clr-neutral-100);
 }
 
 .explain{
@@ -309,3 +345,11 @@ padding-top: 5%;
 .top {
   text-decoration: underline;
 }
+
+.logo {
+    max-width: 30%;
+    max-height: 30%;
+}
+
+
+                
