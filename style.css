@@ -9,6 +9,7 @@
   --font-family-heading: var(--font-family-primary);
   
   --fs-300: .9375rem;
+  --fs-450: 1.33rem;
   --fs-400: 1.3rem;
   --fs-500: 3.125rem; 
   --fs-600: 3.625rem;
@@ -187,7 +188,14 @@ svg {
 }
 
 .fs-small {
-  font-size: var(--fs-400);
+    font-size: var(--fs-400);
+    
+}
+
+.fs-head {
+    font-size: var(--fs-450);
+    color: black;
+    font-weight:700
 } 
 
 .fs-medium {
@@ -207,7 +215,7 @@ svg {
 .nav_animate::after {
     content: '';
     position: absolute;
-    background-color: var(--clr-primary-400);
+    background-color: black;
     height: 3px;
     width: 0;
     left: 0px;
@@ -320,7 +328,7 @@ padding-bottom: 5%;
     .foot-links::after {
         content: '';
         position: absolute;
-        background-color: var(--clr-primary-400);
+        background-color: black;
         height: 3px;
         width: 0;
         left: 0px;
@@ -456,6 +464,10 @@ padding-bottom: 5%;
     }
 }
 
+
+
+
+                
 
 
 
